@@ -1,0 +1,238 @@
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: rgba(9, 19, 26, 0.8);
+  --color-darkblue-alpha: rgba(9, 19, 26, 0.8);
+  --color-green: #37af65;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+}
+
+/* mobile friendly alternative to using background-attachment: fixed */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(180deg, rgba(21, 43, 58, 0.8), rgba(34, 70, 94, 0.2)), url('./wallpaper-gamer.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2em;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 3px 3px black;
+  padding-bottom: 0.2em;
+}
+
+p {
+  font-size: 1.15rem;
+  text-shadow: 1px 1px black;
+  font-weight: 500;
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.08rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  border: none;
+}
+
+span{
+  font-size: 14px;
+}
+
+.container {
+  width: 100%;
+  margin: 2em auto 0 auto;
+}
+
+#description {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  padding-bottom: 0.2em;
+}
+
+/* form */
+form {
+  background: var(--color-darkblue-alpha);
+  padding: 2em;
+  border-radius: 0.25rem;
+  margin: 0 20% 3em 20%;
+}
+
+#name-label, #email-label, #number-label, #state-label, #play-time-label{
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+#form-group input:nth-child(2) {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#form-group input, #dropdown{
+  padding: 0.5em;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  margin-right: 0.3em;
+  min-height: 0.8em;
+  min-width: 0.9em;
+}
+
+#form-group {
+  margin: 0 auto 1.8em auto;
+  transition: 0.4s;
+  transition-timing-function: linear;  
+  display: block;
+}
+
+#form-group p{
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+input#other-preferences {
+  display: inline-block;
+  min-height: fit-content;
+  margin-left: 0.5em;
+}
+
+#submit {
+  display: block;
+  font-size: 18px;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-green);
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: .4s;
+  transition-timing-function: linear;
+}
+
+#submit:hover {
+  background-color: green;
+}
+
+/*media*/
+@media (max-width: 768px) {
+  .container {
+    width: 80%;    
+  }
+
+  #description {
+    font-size: 1em;
+  }
+
+  #survey-form{
+    padding: 2em 1.5em 0.5em 1.5em;
+    margin: auto 10% 1em 10%;
+  }
+
+  p, #name-label, #email-label, #number-label, #state-label, #play-time-label{
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  label{
+    font-size: 1.1rem;
+  }
+
+  span{
+    font-size: 18px;
+  }
+
+  input[type="checkbox"], input[type="radio"] {
+    margin-right: 0.4em;
+    min-height: 1.1em;
+    min-width: 1.1em;
+  }
+
+  #dropdown{
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 90%;
+  }  
+
+  #survey-form{
+    padding: 1.5em 1.5em 0.5em 1.5em;
+    margin: 0 auto;
+   }
+
+  #dropdown{
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  p, #name-label, #email-label, #number-label, #state-label, #play-time-label{
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  label{
+    font-size: 1rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  #survey-form {
+    padding: 2rem;
+  }
+ }
