@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+  <title>Questionário de preferências sobre games</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<div class="container">
+  <header>
+    <div id="header-container">
+      <h1 id="title">Qual é o seu jogo?</h1>
+      <p id="description">Responda o questionário abaixo para sabermos suas preferências!</p>
+    </div>
+  </header>
+
+<main>
+  <form id="survey-form" action="">
+    <div id="form-group">
+      <label for="name" id="name-label">Nome</label>
+      <input type="text" name="name" id="name" placeholder="Digite seu nome" required autofocus />
+    </div>
+    <div id="form-group">
+      <label for="email" id="email-label">E-mail</label>
+      <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required />
+    </div>
+    <div id="form-group">
+      <label for="number" id="number-label">Idade <span>(opcional)</span></label>
+      <input type="number" name="number" id="number" placeholder="Digite sua idade" min="6" max="100"/>
+    </div>
+    <div id="form-group">
+      <label for="state" id="state-label">Escolha seu estado</label>
+      <select id="dropdown" name="state" required>
+          <option value="">Selecione</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espirito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+      </select>
+    </div>
+    <div id="form-group">
+      <label for="play-time" id="play-time-label">Com que frequência você joga?</label>
+      <select id="dropdown" name="play-time" required>
+        <option value="">Selecione</option>
+        <option value="fds">Não tenho muito tempo livre, jogo somente aos fins de semana</option>
+        <option value="1-3h">1 a 3 horas por dia</option>
+        <option value="3-6h">3 a 6 horas por dia</option>
+        <option value="6-8h">6 a 8 horas por dia</option>
+        <option value=">8h">Acima de 8 horas por dia</option>
+      </select>
+    </div>
+    <div id="form-group">
+      <p>Selecione sua plataforma <span>(você pode escolher mais de uma opção)</span>:</p>
+        <label><input id="platform" name="platform" value="PC" type="checkbox">PC</label>
+        <label><input id="platform" name="platform" value="xbox" type="checkbox">Xbox One</label>
+        <label><input id="platform" name="platform" value="ps4" type="checkbox">Playstation 4</label>
+        <label><input id="platform" name="platform" value="switch" type="checkbox">Nintendo Switch</label>
+        <label><input id="platform" name="platform" value="old_sony" type="checkbox">Consoles de gerações passadas Sony (PS3, PS2, etc.)</label>
+        <label><input id="platform" name="platform" value="old_microsoft" type="checkbox">Consoles de gerações passadas Microsoft (Xbox 360, etc.)</label>
+        <label><input id="platform" name="platform" value="old_nintendo" type="checkbox">Consoles de gerações passadas Nintendo (Wii U, Wii, Game Cube, etc.)</label>
+        <label><input id="platform" name="platform" value="retro" type="checkbox">Consoles retrôs (NES, Mega Drive, Atari, etc.)</label>        
+    </div>
+    <div id="form-group">
+      <p>Quais são seus estilos e/ou gêneros favoritos?</p>
+        <label><input id="game-preferences" name="game-preferences" value="FPS" type="checkbox">FPS</label>
+        <label><input id="game-preferences" name="game-preferences" value="RTS" type="checkbox">RTS</label>
+        <label><input id="game-preferences" name="game-preferences" value="MOBA" type="checkbox">MOBA</label>
+        <label><input id="game-preferences" name="game-preferences" value="MMORPG" type="checkbox">MMORPG</label>
+        <label><input id="game-preferences" name="game-preferences" value="battle_royale" type="checkbox">Battle Royale</label>
+        <label><input id="game-preferences" name="game-preferences" value="aventura" type="checkbox">Aventura</label>
+        <label><input id="game-preferences" name="game-preferences" value="corrida" type="checkbox">Corrida</label>
+        <label><input id="game-preferences" name="game-preferences" value="estrategia" type="checkbox">Estratégia</label>  
+        <label><input id="game-preferences" name="game-preferences" value="simuladores" type="checkbox">Simuladores</label>  
+        <label><input id="game-preferences" name="game-preferences" value="esporte" type="checkbox">Esporte</label>    
+        <label><input id="game-preferences" name="game-preferences" value="indie" type="checkbox">Indie</label>  
+        <label><input id="game-preferences" name="game-preferences" value="luta" type="checkbox">Luta</label>  
+        <label><input id="game-preferences" name="game-preferences" value="outros" type="checkbox">Outros:<input type="text" id="other-preferences" placeholder="Cite outros estilos e/ou gêneros que você goste"></label> 
+        </div>
+    <div id="form-group">
+      <p>Você tem interesse em comprar algum console da próxima geração?</p>
+      <label><input id="game-interest" name="game-interest" value="yes" type="radio" />Sim</label>   
+      <label><input id="game-interest" name="game-interest" value="no" type="radio" />Não</label> 
+      <label><input id="game-interest" name="game-interest" value="only-pc" type="radio" />Tenho somente PC</label>    
+    </div>
+    <div id="form-group">
+      <p>Você acha que os jogos vendidos no Brasil são muito caros?</p>
+      <label><input id="game-value" name="game-value" value="yes" type="radio" />Sim</label>   
+      <label><input id="game-value" name="game-value" value="no" type="radio" />Não </label> 
+    </div>
+    <div id="form-group">
+      <p>Faça um comentário ou sugestão!</p>
+      <textarea name="opinion" id="opinion" placeholder="Insira seu comentário aqui"></textarea>
+    </div>
+    <div id="form-group">
+      <button type="submit" id="submit">Enviar</button>
+    </div>
+
+  </form>
+
+
+</main>
+
+
+
+
+</div>
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
